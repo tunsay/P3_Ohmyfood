@@ -2,22 +2,9 @@
     --primary-color: #9356DC;
     --secondary-color: #FF79DA;
     --tertiary-color: #99E2D0;
-    --padding-standard: 50px;
 }
 
-@font-face {
-    font-family: "Roboto";
-    src: url("./fonts/Roboto/Roboto-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: "Roboto";
-    src: url("./fonts/Roboto/Roboto-Bold.ttf");
-    font-weight: bold;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 .primary-color {
     color: var(--primary-color);
@@ -31,10 +18,20 @@
     color: var(--tertiary-color);
 }
 
+p,
+h1{
+    margin: 5px 0;
+}
+
+p{
+    font-weight: lighter;
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
-    padding: 25px var(--padding-standard);
+    padding: 25px 50px;
 }
 
 #logo,
@@ -63,15 +60,181 @@ body {
     padding: 0;
 }
 
-@media screen and (max-width: 992px){
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 25px;
+}
+
+#explore p{
+    color: grey;
+}
+
+.shadow{
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 10px;
+}
+
+.button {
+  align-items: center;
+  border: none;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 15px;
+  margin: 20px;
+  transition: all .2s;
+}
+
+
+
+
+
+.button-explore{
+     background: linear-gradient(to bottom right, var(--secondary-color),var(--primary-color));
+     border-radius: 100px;  
+     color: #ffffff;  
+     height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-explore:hover { 
+    filter: brightness(85%);
+}
+
+.button:active {
+  filter: brightness(50%);
+}
+
+
+
+
+
+#functioning{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 25px;
+}
+
+.title-functioning{
+    display: flex;
+    width: 100%;
+    flex:1;
+}
+
+.title-functioning h1{
+    padding: 0;
+}
+
+.button-functioning{
+    background-color: #f2f2f2;
+    border-radius: 25px;  
+    height: 75px;
+    width: 350px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button-functioning:hover{
+    background-color: #9256dc15;
+}
+
+.button-functioning i{
+    color: grey;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}
+
+.button-functioning p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+.button-functioning .round-f{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    right: 15px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#restaurant{
+    display: flex;
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(59, 59, 59);
+    padding: 25px;
+    margin: 0;
+}
+footer img{
+    width: 120px;
+    filter: invert(1);
 
 }
 
-@media screen and (max-width: 768px) {
+footer ul li a {
+    line-height: 30px;
+    color: white    ;
+}
+
+footer ul li a i{
+    padding-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px) {
     
     header{
         flex-direction: column;
         padding: 0;
+    }
+
+    h1{
+        font-size: 25px;
+        padding: 0 25px;
     }
 
     #localisation, #logo{
@@ -86,7 +249,19 @@ body {
     }
 
     #localisation{
-        background-color: #f2f2f2;
+        background-color: #e4e4e4;
         z-index: -1;
+    }
+
+    #explore{
+
+    }
+
+    #functioning{
+        flex-direction: column;
+    }
+
+    .button-functioning{
+        width: 100%;
     }
 }

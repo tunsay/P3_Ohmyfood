@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OhMyFood</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+    <title>Projet 3 - OhMyFood</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/21eab10f51.js" crossorigin="anonymous"></script>
 </head>
 <header>
@@ -18,9 +21,49 @@
      </div>
 </header>
 <body>
-    
+    <div id="explore">
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button class="button button-explore shadow" type="button" role="button">Explorez nos restaurants</button>
+    </div>
+    <div id="functioning">
+        <div class="title-functioning"><h1>Fonctionnement</h1></div>
+        <button class="button button-functioning shadow" name="button" value="button" type="button">
+            <div class="round-f">1</div>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <p>Choisissez un restaurant</p>
+        </button>
+        <button class="button button-functioning shadow" name="button" value="button" type="button">
+            <div class="round-f">2</div>
+            <i class="fa-solid fa-list"></i>
+            <p>Composez votre menu</p>
+        </button>
+        <button class="button button-functioning shadow" name="button" value="button" type="button">
+            <div class="round-f">3</div>
+            <i class="fa-solid fa-store"></i>
+            <p>Dégustez au restaurant</p>
+        </button>
+    </div>
+    <div id="restaurant">
+        <h1>Restaurants</h1>
+    </div>
 </body>
 <footer>
 
-</footer>
+        <img src="./images/logo/ohmyfood.png" alt="">
+       <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+          </li>
+          <li>
+             <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+          </li>
+          <li>
+             <a href="#">Mentions légales</a>
+          </li>
+          <li>
+            <a href="mailto:tuna1997@hotmail.fr">Contact</a>
+         </li>
+       </ul>
+ </footer>
 </html>
