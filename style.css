@@ -39,10 +39,6 @@ header{
     display: flex;
 }
 
-#logo{
-    
-}
-
 #logo img{
     width: 150px;
 }
@@ -251,10 +247,6 @@ footer ul li a i{
     #localisation{
         background-color: #e4e4e4;
         z-index: -1;
-    }
-
-    #explore{
-
     }
 
     #functioning{
