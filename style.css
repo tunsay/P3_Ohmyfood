@@ -1,5 +1,6 @@
 :root {
     --primary-color: #9356DC;
+    --primary-opacity-color: #9256dc28;
     --secondary-color: #FF79DA;
     --tertiary-color: #99E2D0;
 }
@@ -89,10 +90,8 @@ ul {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 15px;
-  margin: 20px;
   transition: all .2s;
 }
-
 
 
 
@@ -104,6 +103,7 @@ ul {
      height: 50px;
     width: 200px;
     display: flex;
+    margin: 20px 0;
     justify-content: center;
     text-align: center;
 }
@@ -111,6 +111,8 @@ ul {
 .button-explore:hover { 
     filter: brightness(85%);
 }
+
+
 
 .button:active {
   filter: brightness(50%);
@@ -138,17 +140,28 @@ ul {
     padding: 0;
 }
 
+.button-funtioning-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .button-functioning{
     background-color: #f2f2f2;
     border-radius: 25px;  
     height: 75px;
-    width: 350px;
+    width: 30%;
+    margin: 20px 10px;
     display: flex;
     justify-content: flex-start;
 }
 
 .button-functioning:hover{
-    background-color: #9256dc15;
+    background-color: var(--primary-opacity-color);
+}
+
+.button-functioning:hover i { 
+    color: var(--primary-color);
 }
 
 .button-functioning i{
@@ -163,18 +176,13 @@ ul {
 
 .button-functioning p{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
-
-
-
-
-
 .button-functioning .round-f{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 20px;
     position: relative;
     right: 15px;
@@ -185,6 +193,8 @@ ul {
     align-items: center;
     justify-content: center;
 }
+
+
 
 #restaurant{
     display: flex;
@@ -217,7 +227,12 @@ footer ul li a i{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 996px){
+
+    #functioning{
+        display: flex;
+        flex-direction: column;
+    }
 
 }
 
@@ -253,7 +268,11 @@ footer ul li a i{
         flex-direction: column;
     }
 
+    .button-funtioning-list{
+        flex-direction: column;
+    }
+
     .button-functioning{
-        width: 100%;
+        width: auto;
     }
 }
