@@ -61,6 +61,19 @@ body {
     padding: 0;
 }
 
+h2,
+strong{
+    font-weight: 500;
+}
+
+h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 5px;
+    border-bottom:4px solid var(--tertiary-color);
+    width: 50px;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -320,6 +333,8 @@ ul {
     align-items: flex-end;
 }
 
+/* #################################### MENU ################################################# */
+
 .title-menu-heart{
     display: flex;
     justify-content: space-between;
@@ -349,6 +364,92 @@ ul {
     overflow: hidden;
 }
 
+label{
+    display: flex;
+}
+
+.menu-choice{
+    display: flex;
+    height: 75px;
+    width: 100%;
+    
+}
+
+.menu-choice h2,
+.menu-choice p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+
+
+.title-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-menu-choice{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.right-menu-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    width: 0;
+    background: var(--tertiary-color);
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+}
+
+.round-validate{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:spin-validate-icon 4s linear infinite;
+}
+
+.round-validate i{
+    color: var(--tertiary-color);
+}
+
+
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
+input[type="radio"]:checked + .menu-choice .left-menu-choice,
+input[type="radio"]:hover + .menu-choice .left-menu-choice {
+    width: 70%;
+  }
+
+@keyframes spin-validate-icon { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 @keyframes loading{
     100% {
         height: auto;
@@ -366,6 +467,38 @@ ul {
         height: 0px;
     }
 }
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(59, 59, 59);
+    padding: 25px;
+    margin: 0;
+}
+footer img{
+    width: 120px;
+    filter: invert(1);
+
+}
+
+footer ul li a {
+    line-height: 30px;
+    color: white;
+}
+
+footer ul li a i{
+    padding-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.arrow-left{
+    display: none;
+}
+
+/* ######################################## Le loading ########################################### */
 
 .loader{
     width: 50px;
@@ -412,52 +545,7 @@ ul {
     }
   }
 
-h3{
-    text-transform: uppercase;
-    font-weight: 400;
-    padding-bottom: 5px;
-    border-bottom:4px solid var(--tertiary-color);
-    width: 50px;
-}
-
-.menu-choice{
-    height: 40px;
-    padding: 10px;
-}
-
-/* input[type="radio"] {
-    -webkit-appearance: none;
-    appearance: none;
-    margin: 0;
-  } */
-
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(59, 59, 59);
-    padding: 25px;
-    margin: 0;
-}
-footer img{
-    width: 120px;
-    filter: invert(1);
-
-}
-
-footer ul li a {
-    line-height: 30px;
-    color: white    ;
-}
-
-footer ul li a i{
-    padding-right: 10px;
-    height: 20px;
-    width: 20px;
-}
-
-.arrow-left{
-    display: none;
-}
+/* ######################################## Le loading ########################################### */
 
 
 @media screen and (min-width: 481px) and (max-width: 996px){
