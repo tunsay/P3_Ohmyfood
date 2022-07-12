@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 :root {
     --primary-color: #9356DC;
     --primary-opacity-color: #9256dc28;
@@ -5,9 +8,6 @@
     --tertiary-color: #99E2D0;
     --grey: #f2f2f2;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 .primary-color {
     color: var(--primary-color);
@@ -23,11 +23,13 @@
 
 
 p,
-h1 {
+h1,
+.span-p {
     margin: 5px 0;
 }
 
-p {
+p,
+.span-p {
     font-weight: 300;
 }
 
@@ -61,7 +63,8 @@ body {
     padding: 0;
 }
 
-h2 {
+h2,
+.title-h2 {
     font-weight: 500;
 }
 
@@ -318,7 +321,6 @@ ul {
     font-weight: 900;
     background: -webkit-linear-gradient(top, var(--primary-color) 30%, var(--secondary-color) 100%);
     -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
 }
 
@@ -364,6 +366,16 @@ ul {
 label {
     display: flex;
     cursor: pointer;
+    animation: height-effect 0s both 2s ;
+}
+
+@keyframes height-effect{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: auto;
+    }
 }
 
 .menu-choice {
@@ -371,9 +383,7 @@ label {
     height: 75px;
     width: 100%;
     margin: 0;
-    transition: all 1s ease-in-out;
-    animation: margin-effect 1s both 1s;
-    
+    animation: margin-effect 1.5s both 2s;  
 }
 
 @keyframes margin-effect{
@@ -427,9 +437,10 @@ label {
     flex-grow: 1;
     height: 100%;
     width: 0;
-    background: var(--tertiary-color);
+    background-color: var(--tertiary-color);
     border-radius: 0 20px 20px 0;
     overflow: hidden;
+    transition: background-color .2s ease-out;
 }
 
 .round-validate {
@@ -457,28 +468,36 @@ input[type="radio"] {
 
 input[type="radio"]:checked+.menu-choice .left-menu-choice,
 input[type="radio"]:hover+.menu-choice .left-menu-choice {
-    width: 70%;
+    width: calc( 100% - 110px );
+}
+
+input[type="radio"]:checked+.menu-choice .right-menu-choice {
+    background: var(--primary-color);
 }
 
 input[type="radio"]:hover+.menu-choice .right-menu-choice .round-validate {
     transform: rotate(360deg);
 }
 
+input[type="radio"]:checked+.menu-choice .right-menu-choice .round-validate i{
+    color: var(--primary-color);
+}
+
 .section{
     opacity: 0;
-    animation: loading-menu 1s both;
+    animation: loading-menu 2s both;
 }
 
 .section:nth-child(1){
-    animation-delay: 1s;
-}
-
-.section:nth-child(2){
     animation-delay: 2s;
 }
 
-.section:nth-child(3){
+.section:nth-child(2){
     animation-delay: 3s;
+}
+
+.section:nth-child(3){
+    animation-delay: 4s;
 }
 
 
@@ -526,11 +545,23 @@ footer ul li a i {
 /* ######################################## Le loading ########################################### */
 
 .loader {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 123px;
+    margin: 0 -50px;
+    animation: loading-complete 0s both 2s;
+}
+
+@keyframes loading-complete{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 #loader-1:before,
@@ -631,5 +662,13 @@ footer ul li a i {
 
     .button-functioning {
         width: auto;
+    }
+
+    input[type="radio"]:checked+.menu-choice .right-menu-choice {
+        background: var(--tertiary-color);
+    }
+
+    input[type="radio"]:checked+.menu-choice .right-menu-choice .round-validate i{
+        color: var(--tertiary-color);
     }
 }
