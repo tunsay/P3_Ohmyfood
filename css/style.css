@@ -690,15 +690,8 @@ footer ul li a i {
         max-width: 35%;
         padding: 25px;
         z-index: 1;
-        height: 13px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
     }
 
-    .explore-left-text:hover{
-        overflow: unset;
-    }
 
 
     .explore-right {
@@ -719,7 +712,7 @@ footer ul li a i {
     }
 
     .result-restaurant{
-        width: 50%;
+        width: 48%;
     }
 
     .section-desktop{
@@ -727,6 +720,13 @@ footer ul li a i {
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    .card:nth-child(1),
+    .card:nth-child(3){
+        margin-right: 30px;
+
+    }
+
 
     .back-to-index::before{
         content: "  Retour à la liste";
