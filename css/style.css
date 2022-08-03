@@ -590,9 +590,10 @@ footer ul li a i {
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top:50%;
+    transform: translate(0, -50%);
     margin: 10px -50px;
     animation: loading-complete 0s both 3s;
 }
